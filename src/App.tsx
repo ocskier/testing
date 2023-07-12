@@ -14,7 +14,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <Router basename="/">
+        <Router>
           <Routes>
             <Route index element={<Home />} />
             <Route path="aboutme" element={<AboutMe />} />
