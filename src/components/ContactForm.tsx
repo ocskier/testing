@@ -1,62 +1,69 @@
-import { Box, Button, TextField, Typography, Grid } from "@mui/material";
-import { Formik, Form } from "formik";
+import { Box, Button, TextField, Typography, Grid } from '@mui/material';
+import { Formik, Form } from 'formik';
 
-import mobileBG from "../assets/colour-square.svg";
-import tabletBG from "../assets/tabletBG.svg";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import mobileBG from '../assets/colour-square.svg';
+import tabletBG from '../assets/tabletBG.svg';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const handleSubmitForm = () => {
     // Handle form submission logic here
   };
 
-  const smallScreen = useMediaQuery("(min-width: 300px) and (max-width: 600px)");
-  const mediumScreen = useMediaQuery("(min-width: 600px) and (max-width: 900px)");
-  const largeScreen = useMediaQuery("(min-width: 900px) and (max-width: 1350px)");
-
+  const smallScreen = useMediaQuery(
+    '(min-width: 300px) and (max-width: 600px)'
+  );
+  const mediumScreen = useMediaQuery(
+    '(min-width: 600px) and (max-width: 900px)'
+  );
+  const largeScreen = useMediaQuery(
+    '(min-width: 900px) and (max-width: 1350px)'
+  );
 
   let bgSVG;
   let headingSize;
   let morphWidth;
   if (smallScreen) {
-    bgSVG = "url(" + mobileBG + ")";
-    headingSize = "3rem";
-    morphWidth = "75%";
+    bgSVG = 'url(' + mobileBG + ')';
+    headingSize = '3rem';
+    morphWidth = '75%';
   } else if (mediumScreen) {
-    bgSVG = "url(" + tabletBG + ")";
-    headingSize = "4rem";
-    morphWidth = "75%";
-      } else if (largeScreen) {
-    bgSVG = "url(" + tabletBG + ")";
-    headingSize = "4rem";
-    morphWidth = "55%";
-     } else {
-    bgSVG = "url(" + tabletBG + ")";
-    headingSize = "5rem";
-    morphWidth = "55%";
+    bgSVG = 'url(' + tabletBG + ')';
+    headingSize = '4rem';
+    morphWidth = '75%';
+  } else if (largeScreen) {
+    bgSVG = 'url(' + tabletBG + ')';
+    headingSize = '4rem';
+    morphWidth = '55%';
+  } else {
+    bgSVG = 'url(' + tabletBG + ')';
+    headingSize = '5rem';
+    morphWidth = '55%';
   }
 
   const glassMorphismStyles = {
-    backdropFilter: "blur(55px) brightness(100%)",
-    background: "linear-gradient(180deg, rgba(239, 239, 239, 0.6) 0%, rgba(239, 239, 239, 0.08) 100%)",
-    borderRadius: "20px",
-    border: "1px solid",
-    borderColor: "#D9D9D9",
-    height: "85%",
+    backdropFilter: 'blur(55px) brightness(100%)',
+    background:
+      'linear-gradient(180deg, rgba(239, 239, 239, 0.6) 0%, rgba(239, 239, 239, 0.08) 100%)',
+    borderRadius: '20px',
+    border: '1px solid',
+    borderColor: '#D9D9D9',
+    height: '85%',
     width: morphWidth,
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    padding: "20px",
-    transform: "translate(-50%, -50%)",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    padding: '20px',
+    transform: 'translate(-50%, -50%)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
   };
 
   const textFieldStyle = {
-    color: "black"
+    color: 'black',
   };
 
   return (
@@ -64,60 +71,64 @@ const Contact = () => {
       <Grid item xs={12} md={6}>
         <Box
           sx={{
-            height: "100vh",
-            width: "100vw",
+            height: '100vh',
+            width: '100vw',
             backgroundImage: bgSVG,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             margin: 0,
-            position: "relative",
+            position: 'relative',
           }}
         >
-            <Box sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "flex-end",
-          marginRight: "20px",
-        }}>
-          <Button
-            href="/menu"
+          <Box
             sx={{
-              width: "150px",
-              height: "45px",
-              fontSize: 20,
-              margin: "20px"
-            }}>
-            Menu
-          </Button>
-        </Box>
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-end',
+              marginRight: '20px',
+            }}
+          >
+            <Link to="/menu">
+              <Button
+                sx={{
+                  width: '150px',
+                  height: '45px',
+                  fontSize: 20,
+                  margin: '20px',
+                }}
+              >
+                Menu
+              </Button>
+            </Link>
+          </Box>
           <Box sx={glassMorphismStyles}>
             <Box
               sx={{
-                textAlign: "center",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
+                textAlign: 'center',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
                 mt: 2,
                 mb: 2,
                 maxWidth: 400,
-                mx: "auto",
+                mx: 'auto',
               }}
             >
               <Typography
                 variant="h1"
                 color="default"
                 sx={{
-                  letterSpacing: "4px",
+                  letterSpacing: '4px',
                   fontSize: headingSize,
                   mb: 2,
-                  textAlign: "left",                  
+                  textAlign: 'left',
                 }}
               >
                 Contact <br /> Me.
               </Typography>
               <Formik
-                initialValues={{ name: "", email: "", phone: "", message: "" }}
+                initialValues={{ name: '', email: '', phone: '', message: '' }}
                 onSubmit={handleSubmitForm}
               >
                 <Form>
@@ -130,7 +141,7 @@ const Contact = () => {
                     color="secondary"
                     sx={{ my: 1 }}
                     inputProps={{
-                      style: textFieldStyle
+                      style: textFieldStyle,
                     }}
                   />
                   <TextField
@@ -141,7 +152,7 @@ const Contact = () => {
                     fullWidth
                     sx={{ my: 1 }}
                     inputProps={{
-                      style: textFieldStyle
+                      style: textFieldStyle,
                     }}
                   />
                   <TextField
@@ -152,7 +163,7 @@ const Contact = () => {
                     fullWidth
                     sx={{ my: 1 }}
                     inputProps={{
-                      style: textFieldStyle
+                      style: textFieldStyle,
                     }}
                   />
                   <TextField
@@ -163,18 +174,18 @@ const Contact = () => {
                     fullWidth
                     sx={{ my: 1 }}
                     inputProps={{
-                      style: textFieldStyle
+                      style: textFieldStyle,
                     }}
                   />
                   <Button
                     type="submit"
                     sx={{
-                      borderRadius: "30px",
-                      height: "60px",
-                      width: "80%",
-                      textAlign: "center",
-                      color: "#0F352D",
-                      fontSize: "1.2rem",
+                      borderRadius: '30px',
+                      height: '60px',
+                      width: '80%',
+                      textAlign: 'center',
+                      color: '#0F352D',
+                      fontSize: '1.2rem',
                       mt: 7,
                     }}
                   >
