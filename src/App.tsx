@@ -22,10 +22,10 @@ function App() {
         <Router>
           <Routes>
             <Route index element={<Home />} />
-            <Route path="/aboutme" element={<AboutMe />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<ContactForm />} />
-            <Route path="/menu" element={<Menu />} />
+            <Route path="/testing/aboutme" element={<AboutMe />} />
+            <Route path="/testing/portfolio" element={<Portfolio />} />
+            <Route path="/testing/contact" element={<ContactForm />} />
+            <Route path="/testing/menu" element={<Menu />} />
           </Routes>
         </Router>
       </div>
