@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://tjsoho.github.io/tobyjportfolio",
+  "homepage": "https://ocskier.github.io/testing/",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
