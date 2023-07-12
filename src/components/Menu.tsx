@@ -98,14 +98,11 @@ const Menu = () => {
                 height: '100%',
               }}
             >
-              <Button
-                href="./resume"
-                variant="contained"
-                color="primary"
-                style={buttonStyle}
-              >
-                Resume
-              </Button>
+              <Link to="/resume">
+                <Button variant="contained" color="primary" style={buttonStyle}>
+                  Resume
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Grid>
@@ -125,14 +122,11 @@ const Menu = () => {
                 height: '100%',
               }}
             >
-              <Button
-                href="./portfolio"
-                variant="contained"
-                color="primary"
-                style={buttonStyle}
-              >
-                Portfolio
-              </Button>
+              <Link to="/portfolio">
+                <Button variant="contained" color="primary" style={buttonStyle}>
+                  Portfolio
+                </Button>
+              </Link>
             </Box>
           </Box>
           <Box bgcolor={colors[4]} sx={boxStyle}>
@@ -144,14 +138,11 @@ const Menu = () => {
                 height: '100%',
               }}
             >
-              <Button
-                href="./contact"
-                variant="contained"
-                color="primary"
-                style={buttonStyle}
-              >
-                Contact Me
-              </Button>
+              <Link to="/contact">
+                <Button variant="contained" color="primary" style={buttonStyle}>
+                  Contact Me
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Grid>

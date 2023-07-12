@@ -1,21 +1,21 @@
-
-import { Grid, Box, useMediaQuery, Typography, Button } from "@mui/material";
-import mobileBG from "../assets/colour-square.svg";
-import tabletBG from "../assets/tabletBG.svg";
-import portrait from "../assets/TobyPortraitNoBG.png";
+import { Grid, Box, useMediaQuery, Typography, Button } from '@mui/material';
+import mobileBG from '../assets/colour-square.svg';
+import tabletBG from '../assets/tabletBG.svg';
+import portrait from '../assets/TobyPortraitNoBG.png';
+import { Link } from 'react-router-dom';
 
 const ContentPage = () => {
   const smallScreen = useMediaQuery(
-    "(min-width: 300px) and (max-width: 600px)"
+    '(min-width: 300px) and (max-width: 600px)'
   );
   const mediumScreen = useMediaQuery(
-    "(min-width: 600px) and (max-width: 1000px)"
+    '(min-width: 600px) and (max-width: 1000px)'
   );
   const largeScreen = useMediaQuery(
-    "(min-width: 1000px) and (max-width: 1200px)"
+    '(min-width: 1000px) and (max-width: 1200px)'
   );
   const extraLargeScreen = useMediaQuery(
-    "(min-width: 1201px) and (max-width: 1400px)"
+    '(min-width: 1201px) and (max-width: 1400px)'
   );
 
   let bgSVG;
@@ -27,81 +27,81 @@ const ContentPage = () => {
   let textMargin;
 
   if (smallScreen) {
-    bgSVG = "url(" + mobileBG + ")";
-    headingSize = "3rem";
-    imageHeight = "300px";
-    imageTop = "calc(100% - 244px)"; // Adjusted value to position the image at the bottom line
-    imageLeft = "calc(65% - 125px)";
-    pad = "20px";
-    textMargin = "0px";
+    bgSVG = 'url(' + mobileBG + ')';
+    headingSize = '3rem';
+    imageHeight = '300px';
+    imageTop = 'calc(100% - 244px)'; // Adjusted value to position the image at the bottom line
+    imageLeft = 'calc(65% - 125px)';
+    pad = '20px';
+    textMargin = '0px';
   } else if (mediumScreen) {
-    bgSVG = "url(" + tabletBG + ")";
-    headingSize = "4rem";
-    imageHeight = "430px";
-    imageTop = "calc(100% - 348px)";
-    imageLeft = "calc(65% - 151px)";
-    pad = "20px";
-    textMargin = "0px";
+    bgSVG = 'url(' + tabletBG + ')';
+    headingSize = '4rem';
+    imageHeight = '430px';
+    imageTop = 'calc(100% - 348px)';
+    imageLeft = 'calc(65% - 151px)';
+    pad = '20px';
+    textMargin = '0px';
   } else if (largeScreen) {
-    bgSVG = "url(" + tabletBG + ")";
-    headingSize = "5rem";
-    imageHeight = "500px";
-    imageTop = "calc(100% - 404px)";
-    imageLeft = "calc(65% - 100px)";
-    pad = "20px";
-    textMargin = "100px";
+    bgSVG = 'url(' + tabletBG + ')';
+    headingSize = '5rem';
+    imageHeight = '500px';
+    imageTop = 'calc(100% - 404px)';
+    imageLeft = 'calc(65% - 100px)';
+    pad = '20px';
+    textMargin = '100px';
   } else if (extraLargeScreen) {
-    bgSVG = "url(" + tabletBG + ")";
-    headingSize = "6rem";
-    imageHeight = "600px";
-    imageTop = "calc(100% - 485px)";
-    imageLeft = "calc(65% - 140px)";
-    pad = "20px";
-    textMargin = "200px";
+    bgSVG = 'url(' + tabletBG + ')';
+    headingSize = '6rem';
+    imageHeight = '600px';
+    imageTop = 'calc(100% - 485px)';
+    imageLeft = 'calc(65% - 140px)';
+    pad = '20px';
+    textMargin = '200px';
   } else {
-    bgSVG = "url(" + tabletBG + ")";
-    headingSize = "8rem";
-    imageHeight = "700px";
-    imageTop = "calc(100% - 569px)";
-    imageLeft = "calc(65% - 140px)";
-    pad = "80px";
-    textMargin = "250px";
+    bgSVG = 'url(' + tabletBG + ')';
+    headingSize = '8rem';
+    imageHeight = '700px';
+    imageTop = 'calc(100% - 569px)';
+    imageLeft = 'calc(65% - 140px)';
+    pad = '80px';
+    textMargin = '250px';
   }
 
   const scrollbarStyles = {
-    "&::-webkit-scrollbar": {
-      width: "8px"
+    '&::-webkit-scrollbar': {
+      width: '8px',
     },
-    "&::-webkit-scrollbar-track": {
-      background: "transparent"
+    '&::-webkit-scrollbar-track': {
+      background: 'transparent',
     },
-    "&::-webkit-scrollbar-thumb": {
-      background: "transparent",
-      borderRadius: "4px"
+    '&::-webkit-scrollbar-thumb': {
+      background: 'transparent',
+      borderRadius: '4px',
     },
-    "&:hover::-webkit-scrollbar-thumb": {
-      background: "#aaa"
-    }
+    '&:hover::-webkit-scrollbar-thumb': {
+      background: '#aaa',
+    },
   };
 
   const glassMorphismStyles = {
-    backdropFilter: "blur(55px) brightness(100%)",
+    backdropFilter: 'blur(55px) brightness(100%)',
     background:
-      "linear-gradient(180deg, rgba(239, 239, 239, 0.6) 0%, rgba(239, 239, 239, 0.08) 100%)",
-    borderRadius: "20px",
-    border: "1px solid",
-    borderColor: "#D9D9D9",
-    height: "80%",
-    width: "75%",
-    position: "absolute",
-    top: "50%",
-    left: "50%",
+      'linear-gradient(180deg, rgba(239, 239, 239, 0.6) 0%, rgba(239, 239, 239, 0.08) 100%)',
+    borderRadius: '20px',
+    border: '1px solid',
+    borderColor: '#D9D9D9',
+    height: '80%',
+    width: '75%',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
     padding: pad,
-    transform: "translate(-50%, -50%)",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "flex-start",
-    justifyContent: "flex-start"
+    transform: 'translate(-50%, -50%)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
   };
 
   return (
@@ -109,39 +109,44 @@ const ContentPage = () => {
       <Grid item xs={12} md={6}>
         <Box
           sx={{
-            height: "100vh",
-            width: "100vw",
+            height: '100vh',
+            width: '100vw',
             backgroundImage: bgSVG,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
             margin: 0,
-            position: "relative"
-          }}>
+            position: 'relative',
+          }}
+        >
           <Box
             sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-end",
-              marginRight: "20px"
-            }}>
-            <Button
-              href="/menu"
-              sx={{
-                width: "150px",
-                height: "45px",
-                fontSize: 20,
-                margin: "20px"
-              }}>
-              Menu
-            </Button>
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-end',
+              marginRight: '20px',
+            }}
+          >
+            <Link to="/menu">
+              <Button
+                sx={{
+                  width: '150px',
+                  height: '45px',
+                  fontSize: 20,
+                  margin: '20px',
+                }}
+              >
+                Menu
+              </Button>
+            </Link>
           </Box>
           <Box sx={{ ...glassMorphismStyles, ...scrollbarStyles }}>
             <Box>
-              <div style={{ position: "relative" }}>
+              <div style={{ position: 'relative' }}>
                 <Typography
                   variant="h1"
-                  sx={{ marginBottom: "10px", fontSize: headingSize }}>
+                  sx={{ marginBottom: '10px', fontSize: headingSize }}
+                >
                   About
                   <br />
                   Me.
@@ -161,16 +166,18 @@ const ContentPage = () => {
                 </Button> */}
                 <Box
                   sx={{
-                    maxHeight: "calc(50vh - 150px)",
-                    overflowY: "auto",
-                    marginTop: "30px",
-                    display: "flex",
-                    flexDirection: "column",
-                    flexWrap: "wrap"
-                  }}>
+                    maxHeight: 'calc(50vh - 150px)',
+                    overflowY: 'auto',
+                    marginTop: '30px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    flexWrap: 'wrap',
+                  }}
+                >
                   <Typography
                     variant="body1"
-                    sx={{ marginRight: textMargin, padding: "30px" }}>
+                    sx={{ marginRight: textMargin, padding: '30px' }}
+                  >
                     Born with an innate passion for creation, this multifaceted
                     artist embarked on a transformative journey, exploring
                     various artistic realms.
@@ -197,12 +204,12 @@ const ContentPage = () => {
               src={portrait}
               alt="display portrait of Toby"
               style={{
-                maxWidth: "auto",
+                maxWidth: 'auto',
                 height: imageHeight,
-                position: "absolute",
+                position: 'absolute',
                 top: imageTop,
-                right: "50px",
-                left: imageLeft
+                right: '50px',
+                left: imageLeft,
               }}
             />
           </Box>
