@@ -3,7 +3,7 @@ import React from 'react';
 
 import theme from './theme';
 import Home from './components/Home';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './assets/style/root.css';
 import Portfolio from './components/Portfolio';
 import AboutMe from './components/AboutMe';
@@ -14,7 +14,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <Router>
+        <Router basename="/">
           <Routes>
             <Route index element={<Home />} />
             <Route path="/aboutme" element={<AboutMe />} />
