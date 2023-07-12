@@ -3,12 +3,7 @@ import React from 'react';
 
 import theme from './theme';
 import Home from './components/Home';
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './assets/style/root.css';
 import Portfolio from './components/Portfolio';
 import AboutMe from './components/AboutMe';
@@ -22,10 +17,10 @@ function App() {
         <Router>
           <Routes>
             <Route index element={<Home />} />
-            <Route path="/testing/aboutme" element={<AboutMe />} />
-            <Route path="/testing/portfolio" element={<Portfolio />} />
-            <Route path="/testing/contact" element={<ContactForm />} />
-            <Route path="/testing/menu" element={<Menu />} />
+            <Route path="/aboutme" element={<AboutMe />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<ContactForm />} />
+            <Route path="/menu" element={<Menu />} />
           </Routes>
         </Router>
       </div>
